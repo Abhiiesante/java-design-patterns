@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class NameToStars {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+        scanner.close();
+
+        int length = name.length();
+
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print(name.charAt(j));
+            }
+            for (int j = i + 1; j < length; j++) {
+                System.out.print(name.charAt(j));
+            }
+            System.out.println();
+        }
+    }
+}
